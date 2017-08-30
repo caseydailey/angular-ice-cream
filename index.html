@@ -4,13 +4,29 @@
     <meta charset="UTF-8">
     <title>Document</title>
 </head>
+
+<!-- bind app to DOM -->
 <body ng-app="IceCreamApp">
 
-<h1>Ice Cream, Ice Cream, We all scream for Ice Cream</h1>
- 
+    <h1>Ice Cream, Ice Cream, We all scream for Ice Cream</h1>
 
-<script src="lib/node_modules/angular/angular.min.js"></script>   
-<script src="lib/node_modules/angular-route/angular-route.min.js"></script>
-<script src="app/app.js"></script> 
+    <div ng-include="'app/partials/navbar.html'"></div>
+
+    <div ng-view></div>
+
+     
+    <!-- third party -->
+    <script src="lib/node_modules/angular/angular.min.js"></script>   
+    <script src="lib/node_modules/angular-route/angular-route.min.js"></script>
+    
+    <!-- app -->
+    <script src="app/app.js"></script> 
+
+    <!-- factories -->
+    <script src="app/factories/FlavorFactory.js"></script>
+
+    <!-- controllers -->
+    <script src="app/controllers/FlavorCtrl.js"></script>
+
 </body>
 </html>
